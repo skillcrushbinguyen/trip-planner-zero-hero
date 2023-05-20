@@ -14,3 +14,16 @@ mixin tourItem(image, price, title, review, reviewCount, duration, totalPrice)
                      | (#{reviewCount} reviews)
             .tour-duration Duration: #{duration}
          a.tour-button(href='#', target='_blank', rel='noopener noreferrer') Tours Price $#{totalPrice}
+
+mixin popularItem (img, time, title, review, reviewCount)
+   .popular-item 
+      .popular-image 
+         .overlay
+         img(src=img, alt="popular-img")
+         span.popular-label Must See 
+      .popular-content 
+         span.popular-time=time
+         h3.popular-title=title 
+         .popular-review 
+            img(src="./images/star.png", alt="")
+            span.review-count #{review} (#{reviewCount} reviews)
