@@ -42,8 +42,17 @@ body {
   /* Use margin */
   /* margin-left: -30px; */
   /* Use gap */
-  column-gap: 30px;
-  row-gap: 30px;
+  /* column-gap: 30px;
+  row-gap: 30px; */
+
+  /* Use variables */
+  /* ((3-1) * 30) / 3 */
+
+  --columns: 3;
+  --gap: 30px;
+  --spacing: calc(calc(calc(var(--columns) - 1) * var(--gap)) / var(--columns));
+  gap: var(--gap);
+
   display: flex;
   align-items: stretch;
   flex-direction: row;
@@ -57,7 +66,10 @@ body {
 
   /* Use gap */
   /* Gap just contain space of block, not include start and end => total gap is 60px => width - 60/3=20px  */
-  width: calc(33.33% - 20px);
+  /* width: calc(33.33% - 20px); */
+
+  /* Use variables */
+  width: calc(calc(100% / var(--columns)) - var(--spacing));
 
   height: auto;
   background: white;
@@ -168,7 +180,9 @@ body {
 /* Popular Things */
 .popular-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
   gap: 30px;
 }
 
