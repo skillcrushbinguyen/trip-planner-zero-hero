@@ -42,14 +42,13 @@ html(lang="en")
                   100)
 
       section.popular-things 
-         .container 
+         .container
             h2.heading Popular things to do in Bangkok
             .popular-list 
                - var n = 0;
                while n < 4
                   - n++
                   +popularItem('https://source.unsplash.com/random?travel-horizontal', 'Sep 28 10:00 AM - 1:00 PM', 'The Grand Palace The Grand Palace The Grand Palace', 4.8, 12)
-
 
       section.gems 
          .container 
@@ -71,9 +70,7 @@ html(lang="en")
                         .diamond-content 
                            h3.diamond-content-title Bangkok Trip
                            span.diamond-content-time 27 Sep, 2020
-               
-
-      a.button Explore All
+            a.button.diamond-button Explore All
 
       footer.footer
          .container.footer-container  
