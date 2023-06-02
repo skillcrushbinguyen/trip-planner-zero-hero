@@ -1,0 +1,90 @@
+@media screen and (min-width: 768px) {
+  .footer-column:first-child {
+    max-width: 268px;
+  }
+}
+/* 320, 480, 768,  */
+@media screen and (max-width: 767.98px) {
+  section {
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .tour-list {
+    row-gap: 20px;
+  }
+  .tour {
+    width: 100%;
+  }
+
+  .tour-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .tour-rating,
+  .tour-button {
+    font-size: 12px;
+  }
+
+  .popular-things {
+    padding: 29px 0;
+  }
+
+  .gem-list {
+    grid-template-rows: 100px 100px 70px;
+  }
+
+  .diamond {
+    padding: 30px 0;
+  }
+
+  .diamond .heading {
+    margin-bottom: 20px;
+  }
+
+  .diamond-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 148px;
+  }
+
+  .diamond-item {
+    padding: 8px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .diamond-button {
+    margin-top: 19px;
+    margin-bottom: 0;
+    padding: 4px 20px;
+  }
+
+  .footer-container {
+    padding: 30px 0;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+  }
+
+  .footer-logo,
+  .footer-desc {
+    margin-bottom: 24px;
+  }
+
+  .footer-top {
+    padding-bottom: 41px;
+  }
+  .footer-bottom {
+    margin-top: 24px;
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}

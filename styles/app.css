@@ -1,3 +1,13 @@
+:root {
+  --primary-color: #3b71fe;
+  --black-color: #141416;
+  --gray2: #353945;
+  --gray3: #777e90;
+  --gray4: ##b1b5c3;
+  --gray5: #e6e8ec;
+  --gray6: #f4f5f6;
+}
+
 /* Reset css */
 * {
   margin: 0;
@@ -34,22 +44,21 @@ button {
   cursor: pointer;
 }
 
-:root {
-  --primary-color: #3b71fe;
-  --black-color: #141416;
-  --gray2: #353945;
-  --gray3: #777e90;
-  --gray4: ##b1b5c3;
-  --gray5: #e6e8ec;
-  --gray6: #f4f5f6;
-}
-
 body {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   background: white;
   color: var(--gray3);
   padding: 0 20px;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 a.button {
@@ -65,15 +74,6 @@ a.button {
   line-height: 1.5;
 }
 
-section {
-  margin-bottom: 70px;
-}
-
-.container {
-  max-width: 1170px;
-  margin: 0 auto;
-}
-
 .heading {
   margin-bottom: 34px;
   font-weight: 600;
@@ -81,372 +81,6 @@ section {
   line-height: 1.5;
   color: var(--black-color);
 }
-
-/* Top tour */
-.tour-list {
-  /* Use margin */
-  /* margin-left: -30px; */
-  /* Use gap */
-  /* column-gap: 30px;
-  row-gap: 30px; */
-
-  /* Use variables */
-  /* ((3-1) * 30) / 3 */
-
-  --columns: 3;
-  --gap: 30px;
-  --spacing: calc(calc(calc(var(--columns) - 1) * var(--gap)) / var(--columns));
-  gap: var(--gap);
-
-  display: flex;
-  align-items: stretch;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.tour {
-  /* Use margin */
-  /* width: calc(33.33% - 30px);   */
-  /* margin-left: 30px; */
-
-  /* Use gap */
-  /* Gap just contain space of block, not include start and end => total gap is 60px => width - 60/3=20px  */
-  /* width: calc(33.33% - 20px); */
-
-  /* Use variables */
-  width: calc(calc(100% / var(--columns)) - var(--spacing));
-
-  height: auto;
-  background: white;
-  border-radius: 10px;
-}
-
-.tour-top {
-  position: relative;
-}
-
-.tour-image {
-  width: 100%;
-  height: 239px;
-  border-radius: 10px 10px 0 0;
-  object-fit: cover;
-}
-
-.tour-price {
-  position: absolute;
-  top: 24px;
-  left: 30px;
-  padding: 5px 16px;
-  display: inline-block;
-  color: #fcfcfd;
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 500;
-  background: rgb(53, 57, 69, 0.8);
-  border-radius: 4px;
-}
-
-.tour-content {
-  padding: 20px 20px 14px;
-  border-radius: 0 0 10px 10px;
-}
-
-.tour-title {
-  color: #23262f;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.556;
-  margin-bottom: 20px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
-}
-
-.tour-rating {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.tour-duration,
-.tour-review-count {
-  color: #353945;
-}
-
-.tour-review {
-  display: flex;
-  align-items: center;
-  column-gap: 11px;
-}
-
-.tour-duration {
-  display: inline-block;
-}
-
-.tour-button {
-  padding: 8px 17px;
-  font-size: 14px;
-  line-height: 17px;
-  text-decoration: none;
-  border-radius: 8px;
-  background: #3b71fe;
-  color: white;
-  display: inline-block;
-}
-
-/* Popular Things */
-
-.popular-list {
-  display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
-  grid-auto-flow: column;
-  grid-auto-columns: 270px;
-  gap: 30px;
-  overflow-x: auto;
-}
-
-.popular-item {
-  background: #ffffff;
-  box-shadow: 0px 12px 64px rgba(0, 0, 0, 0.06);
-  border-radius: 14px;
-}
-
-.popular-image {
-  height: 211px;
-  position: relative;
-  border-radius: 14px 14px 0 0;
-}
-
-.popular-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(
-    24.19deg,
-    rgba(4, 4, 4, 0.52) 0.23%,
-    rgba(4, 4, 4, 0) 55.52%
-  );
-}
-
-.popular-label {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-  background-color: var(--primary-color);
-  color: var(--gray6);
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.25;
-  padding: 4px 18px;
-  border-radius: 30px;
-  transform: translate(0, 50%);
-}
-
-.popular-content {
-  padding: 11px 20px;
-}
-
-.popular-time {
-  font-weight: 400;
-  font-size: 9px;
-  line-height: 1.22;
-  color: var(--gray3);
-  margin-bottom: 8px;
-}
-
-.popular-title {
-  font-size: 18px;
-  line-height: 1.556;
-  margin-bottom: 9px;
-  color: var(--black-color);
-  font-weight: 500;
-  /* Display ellipsis when title too long */
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
-}
-
-.popular-review {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.review-count {
-  color: var(--gray2);
-  font-size: 12px;
-  line-height: 1.75;
-}
-
-/* Gem */
-.gem-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 200px 200px 150px;
-  /* grid-auto-rows: 300px; https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns */
-  gap: 20px;
-}
-
-.gem-item {
-  border-radius: 15px;
-}
-
-.gem-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-}
-
-.gem-item:first-child {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
-}
-
-.gem-item:nth-child(3) {
-  grid-column: 1 / 2;
-}
-
-.gem-item:nth-last-child(2) {
-  grid-column: 3 / -1;
-  grid-row: 2 / 3;
-}
-
-.gem-item:last-child {
-  grid-column: 2 / -1;
-}
-
-/* Diamond */
-.diamond {
-  background-color: #fcfcfc;
-  padding: 65px 0;
-}
-
-.diamond .container {
-  max-width: 998px;
-  margin-bottom: 0;
-}
-.diamond .heading {
-  text-align: center;
-}
-
-.diamond-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 220px 220px;
-  gap: 30px;
-}
-
-.diamond-item {
-  background: #ffffff;
-  box-shadow: 0px 30px 110px rgba(0, 0, 0, 0.08);
-  border-radius: 14px;
-  padding: 12px;
-}
-
-.diamond-item .diamond-image {
-  position: relative;
-  border-radius: inherit;
-  width: 100%;
-  height: 100%;
-}
-
-.diamond-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
-}
-
-/* Option 1 
-  .diamond-image parent
-  .diamond-image .overlay child - according to parent
-
-  Cons: Many children have to absolute according to parent
-*/
-
-/* .diamond-content {
-  position: absolute;
-  left: 30px;
-  bottom: 14px;
-} */
-
-/* .diamond-image .overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(
-    8.83deg,
-    rgba(0, 0, 0, 0.56) 22.88%,
-    rgba(0, 0, 0, 0) 58.17%
-  );
-} */
-
-/* Option 2 
-  .diamond-image parent
-  .diamond-image .diamond-content child - according to parent
-
-  Pros: Just .diamond-content absolute according to parent
-*/
-.diamond-content {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: inherit;
-  background: linear-gradient(
-    8.83deg,
-    rgba(0, 0, 0, 0.56) 22.88%,
-    rgba(0, 0, 0, 0) 58.17%
-  );
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  padding-left: 30px;
-  padding-bottom: 14px;
-  gap: 6px;
-}
-
-.diamond-content .diamond-content-title {
-  color: white;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1.5;
-  /* margin-bottom: 6px; */
-}
-
-.diamond-content .diamond-content-time {
-  color: var(--gray5);
-  font-size: 14px;
-  line-height: 1.43;
-}
-
-.diamond-button {
-  margin: 70px auto;
-  padding: 9px 40px;
-}
-/* Footer */
 
 .footer-container {
   max-width: 1110px;
@@ -550,11 +184,361 @@ section {
   line-height: 1.43;
   color: var(--gray4);
 }
+
 .socials {
   display: flex;
   gap: 16px;
 }
 
+/* Top tour */
+.tour-list {
+  /* Use margin */
+  /* margin-left: -30px; */
+  /* Use gap */
+  /* column-gap: 30px;
+    row-gap: 30px; */
+  /* Use variables */
+  /* ((3-1) * 30) / 3 */
+  --columns: 3;
+  --gap: 30px;
+  --spacing: calc(calc(calc(var(--columns) - 1) * var(--gap)) / var(--columns));
+  gap: var(--gap);
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tour {
+  /* Use margin */
+  /* width: calc(33.33% - 30px);   */
+  /* margin-left: 30px; */
+  /* Use gap */
+  /* Gap just contain space of block, not include start and end => total gap is 60px => width - 60/3=20px  */
+  /* width: calc(33.33% - 20px); */
+  /* Use variables */
+  width: calc(100% / var(--columns) - var(--spacing));
+  height: auto;
+  background: white;
+  border-radius: 10px;
+}
+
+.tour-top {
+  position: relative;
+}
+
+.tour-image {
+  width: 100%;
+  height: 239px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.tour-price {
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  padding: 5px 16px;
+  display: inline-block;
+  color: #fcfcfd;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  background: rgba(53, 57, 69, 0.8);
+  border-radius: 4px;
+}
+
+.tour-content {
+  padding: 20px 20px 14px;
+  border-radius: 0 0 10px 10px;
+}
+
+.tour-title {
+  color: #23262f;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.556;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.tour-rating {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tour-duration,
+.tour-review-count {
+  color: #353945;
+}
+
+.tour-review {
+  display: flex;
+  align-items: center;
+  column-gap: 11px;
+}
+
+.tour-duration {
+  display: inline-block;
+}
+
+.tour-button {
+  padding: 8px 17px;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  border-radius: 8px;
+  background: #3b71fe;
+  color: white;
+  display: inline-block;
+}
+
+/* Popular Things */
+.popular-list {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-auto-flow: column;
+  grid-auto-columns: 270px;
+  gap: 30px;
+  overflow-x: auto;
+}
+
+.popular-item {
+  background: #ffffff;
+  box-shadow: 0px 12px 64px rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+}
+
+.popular-image {
+  height: 211px;
+  position: relative;
+  border-radius: 14px 14px 0 0;
+}
+
+.popular-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(24.19deg, rgba(4, 4, 4, 0.52) 0.23%, rgba(4, 4, 4, 0) 55.52%);
+}
+
+.popular-label {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: var(--gray6);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  padding: 4px 18px;
+  border-radius: 30px;
+  transform: translate(0, 50%);
+}
+
+.popular-content {
+  padding: 11px 20px;
+}
+
+.popular-time {
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 1.22;
+  color: var(--gray3);
+  margin-bottom: 8px;
+}
+
+.popular-title {
+  font-size: 18px;
+  line-height: 1.556;
+  margin-bottom: 9px;
+  color: var(--black-color);
+  font-weight: 500;
+  /* Display ellipsis when title too long */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.popular-review {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.review-count {
+  color: var(--gray2);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* Gem */
+.gem-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 200px 200px 150px;
+  /* grid-auto-rows: 300px; https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns */
+  gap: 20px;
+}
+
+.gem-item {
+  border-radius: 15px;
+}
+
+.gem-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.gem-item:first-child {
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+
+.gem-item:nth-child(3) {
+  grid-column: 1/2;
+}
+
+.gem-item:nth-last-child(2) {
+  grid-column: 3/-1;
+  grid-row: 2/3;
+}
+
+.gem-item:last-child {
+  grid-column: 2/-1;
+}
+
+/* Diamond */
+.diamond {
+  background-color: #fcfcfc;
+  padding: 65px 0;
+}
+
+.diamond .container {
+  max-width: 998px;
+  margin-bottom: 0;
+}
+
+.diamond .heading {
+  text-align: center;
+}
+
+.diamond-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 220px 220px;
+  gap: 30px;
+}
+
+.diamond-item {
+  background: #ffffff;
+  box-shadow: 0px 30px 110px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.diamond-item .diamond-image {
+  position: relative;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.diamond-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Option 1 
+    .diamond-image parent
+    .diamond-image .overlay child - according to parent
+
+    Cons: Many children have to absolute according to parent
+  */
+/* .diamond-content {
+    position: absolute;
+    left: 30px;
+    bottom: 14px;
+  } */
+/* .diamond-image .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      8.83deg,
+      rgba(0, 0, 0, 0.56) 22.88%,
+      rgba(0, 0, 0, 0) 58.17%
+    );
+  } */
+/* Option 2 
+    .diamond-image parent
+    .diamond-image .diamond-content child - according to parent
+
+    Pros: Just .diamond-content absolute according to parent
+  */
+.diamond-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  background: linear-gradient(8.83deg, rgba(0, 0, 0, 0.56) 22.88%, rgba(0, 0, 0, 0) 58.17%);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-left: 30px;
+  padding-bottom: 14px;
+  gap: 6px;
+}
+
+.diamond-content .diamond-content-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  /* margin-bottom: 6px; */
+}
+
+.diamond-content .diamond-content-time {
+  color: var(--gray5);
+  font-size: 14px;
+  line-height: 1.43;
+}
+
+.diamond-button {
+  margin: 70px auto;
+  padding: 9px 40px;
+}
+
+/* Responsive */
 @media screen and (min-width: 768px) {
   .footer-column:first-child {
     max-width: 268px;
@@ -565,77 +549,62 @@ section {
   section {
     margin-bottom: 20px;
   }
-
   .heading {
     font-weight: 500;
     font-size: 18px;
     margin-bottom: 30px;
   }
-
   .tour-list {
     row-gap: 20px;
   }
   .tour {
     width: 100%;
   }
-
   .tour-title {
     font-size: 16px;
     margin-bottom: 10px;
   }
-
   .tour-rating,
   .tour-button {
     font-size: 12px;
   }
-
   .popular-things {
     padding: 29px 0;
   }
-
   .gem-list {
     grid-template-rows: 100px 100px 70px;
   }
-
   .diamond {
     padding: 30px 0;
   }
-
   .diamond .heading {
     margin-bottom: 20px;
   }
-
   .diamond-list {
     grid-template-columns: 1fr;
     grid-template-rows: none;
     grid-auto-rows: 148px;
   }
-
   .diamond-item {
     padding: 8px;
     font-weight: 600;
     font-size: 16px;
   }
-
   .diamond-button {
     margin-top: 19px;
     margin-bottom: 0;
     padding: 4px 20px;
   }
-
   .footer-container {
     padding: 30px 0;
   }
-
   .footer-columns {
     flex-direction: column;
   }
-
   .footer-logo,
   .footer-desc {
     margin-bottom: 24px;
   }
-
   .footer-top {
     padding-bottom: 41px;
   }
@@ -645,3 +614,5 @@ section {
     gap: 20px;
   }
 }
+
+/*# sourceMappingURL=app.css.map */
