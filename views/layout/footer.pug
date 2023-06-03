@@ -1,0 +1,37 @@
+footer.footer
+   .container.footer-container  
+      .footer-top 
+         .footer-columns 
+            .footer-column
+               a.footer-logo
+                  img(srcSet="./images/logo.png 2x", alt="Airtrav")
+               p.footer-desc Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
+               form.subscribe 
+                  input(type="email", name="email", placeholder="Enter your email").subscribe-email
+                  button(type="submit").subscribe-button
+                     img(src="./images/arrow-right.svg", alt="subscribe-button", srcset="")
+            .footer-column
+               .footer-title Services
+               ul.footer-links
+                  each val in ['Trip Planner', 'Tour Planning', 'Tour Guide', 'Tour Package', 'Tour advice']
+                     li.footer-item 
+                        a.footer-link(href="#")=val 
+            .footer-column
+               .footer-title Support
+               ul.footer-links
+                  each val in ['Trip Planner', 'Tour Planning', 'Tour Guide', 'Tour Package', 'Tour advice']
+                     li.footer-item 
+                        a.footer-link(href="#")=val 
+            .footer-column
+               .footer-title Business
+               ul.footer-links
+                  each val in ['Trip Planner', 'Tour Planning', 'Tour Guide', 'Tour Package', 'Tour advice']
+                     li.footer-item 
+                        a.footer-link(href="#")=val 
+      .footer-bottom  
+         .copyright Copyright© 2023 UIHUT LLC. All rights reserved
+         .socials
+            each s in [1,2,3,4]
+               .social-item 
+                  a(href="#").social-link
+                     img(srcSet="./images/fb-icon.svg", alt="facebook")

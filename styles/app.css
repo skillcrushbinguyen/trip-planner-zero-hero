@@ -3,9 +3,10 @@
   --black-color: #141416;
   --gray2: #353945;
   --gray3: #777e90;
-  --gray4: ##b1b5c3;
+  --gray4: #b1b5c3;
   --gray5: #e6e8ec;
   --gray6: #f4f5f6;
+  --gray7: #f4f5f9;
 }
 
 /* Reset css */
@@ -80,6 +81,36 @@ a.button {
   font-size: 30px;
   line-height: 1.5;
   color: var(--black-color);
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0px 6px 30px rgba(15, 15, 15, 0.06);
+  padding: 16px 0;
+}
+.header-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.header-item {
+  display: inline-block;
+  padding: 14px 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  border-radius: 10px;
+  color: #777e90;
+  background-color: #f4f5f9;
+  transition: all 0.2s linear;
+}
+.header-item:hover {
+  background-color: #3b71fe;
+  color: white;
+  font-weight: 700;
 }
 
 .footer-container {

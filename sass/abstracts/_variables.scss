@@ -1,9 +1,19 @@
+$primary-color: #3b71fe;
+$black-color: #141416;
+$gray2: #353945;
+$gray3: #777e90;
+$gray4: #b1b5c3;
+$gray5: #e6e8ec;
+$gray6: #f4f5f6;
+$gray7: #f4f5f9;
+
 :root {
-  --primary-color: #3b71fe;
-  --black-color: #141416;
-  --gray2: #353945;
-  --gray3: #777e90;
-  --gray4: ##b1b5c3;
-  --gray5: #e6e8ec;
-  --gray6: #f4f5f6;
+  --primary-color: #{$primary-color};
+  --black-color: #{$black-color};
+  --gray2: #{$gray2};
+  --gray3: #{$gray3};
+  --gray4: #{$gray4};
+  --gray5: #{$gray5};
+  --gray6: #{$gray6};
+  --gray7: #{$gray7};
 }
