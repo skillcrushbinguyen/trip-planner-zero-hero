@@ -48,9 +48,8 @@ button {
 body {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  background: white;
+  background-color: white;
   color: var(--gray3);
-  padding: 0 20px;
 }
 
 section {
@@ -58,8 +57,9 @@ section {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 a.button {
@@ -87,17 +87,18 @@ a.button {
   background-color: white;
   box-shadow: 0px 6px 30px rgba(15, 15, 15, 0.06);
   padding: 16px 0;
+  margin-bottom: 70px;
 }
 .header-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 20px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 124px);
   justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 .header-item {
   display: inline-block;
+  flex: 1;
   padding: 14px 0;
   font-weight: 500;
   font-size: 14px;
@@ -106,6 +107,7 @@ a.button {
   color: #777e90;
   background-color: #f4f5f9;
   transition: all 0.2s linear;
+  text-align: center;
 }
 .header-item:hover {
   background-color: #3b71fe;
@@ -239,8 +241,7 @@ a.button {
   flex-direction: row;
   flex-wrap: wrap;
 }
-
-.tour {
+.tour-list .tour-item {
   /* Use margin */
   /* width: calc(33.33% - 30px);   */
   /* margin-left: 30px; */
@@ -252,20 +253,18 @@ a.button {
   height: auto;
   background: white;
   border-radius: 10px;
+  box-shadow: 0px 12px 64px rgba(0, 0, 0, 0.06);
 }
-
-.tour-top {
+.tour-list .tour-item .tour-top {
   position: relative;
 }
-
-.tour-image {
+.tour-list .tour-item .tour-image {
   width: 100%;
   height: 239px;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
 }
-
-.tour-price {
+.tour-list .tour-item .tour-price {
   position: absolute;
   top: 24px;
   left: 30px;
@@ -278,13 +277,11 @@ a.button {
   background: rgba(53, 57, 69, 0.8);
   border-radius: 4px;
 }
-
-.tour-content {
+.tour-list .tour-item .tour-content {
   padding: 20px 20px 14px;
   border-radius: 0 0 10px 10px;
 }
-
-.tour-title {
+.tour-list .tour-item .tour-title {
   color: #23262f;
   font-weight: 500;
   font-size: 18px;
@@ -297,30 +294,25 @@ a.button {
   text-overflow: ellipsis;
   word-break: break-word;
 }
-
-.tour-rating {
+.tour-list .tour-item .tour-rating {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.tour-duration,
-.tour-review-count {
+.tour-list .tour-item .tour-duration,
+.tour-list .tour-item .tour-review-count {
   color: #353945;
 }
-
-.tour-review {
+.tour-list .tour-item .tour-review {
   display: flex;
   align-items: center;
   column-gap: 11px;
 }
-
-.tour-duration {
+.tour-list .tour-item .tour-duration {
   display: inline-block;
 }
-
-.tour-button {
+.tour-list .tour-item .tour-button {
   padding: 8px 17px;
   font-size: 14px;
   line-height: 17px;

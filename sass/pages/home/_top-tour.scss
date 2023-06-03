@@ -17,98 +17,99 @@
   align-items: stretch;
   flex-direction: row;
   flex-wrap: wrap;
-}
 
-.tour {
-  /* Use margin */
-  /* width: calc(33.33% - 30px);   */
-  /* margin-left: 30px; */
+  .tour-item {
+    /* Use margin */
+    /* width: calc(33.33% - 30px);   */
+    /* margin-left: 30px; */
 
-  /* Use gap */
-  /* Gap just contain space of block, not include start and end => total gap is 60px => width - 60/3=20px  */
-  /* width: calc(33.33% - 20px); */
+    /* Use gap */
+    /* Gap just contain space of block, not include start and end => total gap is 60px => width - 60/3=20px  */
+    /* width: calc(33.33% - 20px); */
 
-  /* Use variables */
-  width: calc(calc(100% / var(--columns)) - var(--spacing));
+    /* Use variables */
+    width: calc(calc(100% / var(--columns)) - var(--spacing));
 
-  height: auto;
-  background: white;
-  border-radius: 10px;
-}
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 12px 64px rgba(0, 0, 0, 0.06);
 
-.tour-top {
-  position: relative;
-}
+    .tour-top {
+      position: relative;
+    }
 
-.tour-image {
-  width: 100%;
-  height: 239px;
-  border-radius: 10px 10px 0 0;
-  object-fit: cover;
-}
+    .tour-image {
+      width: 100%;
+      height: 239px;
+      border-radius: 10px 10px 0 0;
+      object-fit: cover;
+    }
 
-.tour-price {
-  position: absolute;
-  top: 24px;
-  left: 30px;
-  padding: 5px 16px;
-  display: inline-block;
-  color: #fcfcfd;
-  font-size: 12px;
-  line-height: 20px;
-  font-weight: 500;
-  background: rgb(53, 57, 69, 0.8);
-  border-radius: 4px;
-}
+    .tour-price {
+      position: absolute;
+      top: 24px;
+      left: 30px;
+      padding: 5px 16px;
+      display: inline-block;
+      color: #fcfcfd;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 500;
+      background: rgb(53, 57, 69, 0.8);
+      border-radius: 4px;
+    }
 
-.tour-content {
-  padding: 20px 20px 14px;
-  border-radius: 0 0 10px 10px;
-}
+    .tour-content {
+      padding: 20px 20px 14px;
+      border-radius: 0 0 10px 10px;
+    }
 
-.tour-title {
-  color: #23262f;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.556;
-  margin-bottom: 20px;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: break-word;
-}
+    .tour-title {
+      color: #23262f;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.556;
+      margin-bottom: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+    }
 
-.tour-rating {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .tour-rating {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.tour-duration,
-.tour-review-count {
-  color: #353945;
-}
+    .tour-duration,
+    .tour-review-count {
+      color: #353945;
+    }
 
-.tour-review {
-  display: flex;
-  align-items: center;
-  column-gap: 11px;
-}
+    .tour-review {
+      display: flex;
+      align-items: center;
+      column-gap: 11px;
+    }
 
-.tour-duration {
-  display: inline-block;
-}
+    .tour-duration {
+      display: inline-block;
+    }
 
-.tour-button {
-  padding: 8px 17px;
-  font-size: 14px;
-  line-height: 17px;
-  text-decoration: none;
-  border-radius: 8px;
-  background: #3b71fe;
-  color: white;
-  display: inline-block;
+    .tour-button {
+      padding: 8px 17px;
+      font-size: 14px;
+      line-height: 17px;
+      text-decoration: none;
+      border-radius: 8px;
+      background: #3b71fe;
+      color: white;
+      display: inline-block;
+    }
+  }
 }

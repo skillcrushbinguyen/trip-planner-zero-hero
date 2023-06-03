@@ -2,13 +2,20 @@
   background-color: white;
   box-shadow: 0px 6px 30px rgba(15, 15, 15, 0.06);
   padding: 16px 0;
+  margin-bottom: 70px;
 
   &-list {
-    @include flex(row, 20px);
+    // @include flex(row, 20px);
+    display: grid;
+    grid-template-columns: repeat(3, 124px);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 
   &-item {
     display: inline-block;
+    flex: 1;
     padding: 14px 0;
     font-weight: 500;
     font-size: 14px;
@@ -17,6 +24,7 @@
     color: $gray3;
     background-color: $gray7;
     transition: all 0.2s linear;
+    text-align: center;
     &:hover {
       background-color: $primary-color;
       color: white;
