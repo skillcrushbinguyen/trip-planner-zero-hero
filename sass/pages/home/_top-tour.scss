@@ -1,34 +1,53 @@
 .tour-list {
+  // @include flexOptimized(
+  //   (
+  //     direction: row,
+  //     wrap: wrap,
+  //   )
+  // );
+
+  // Option 1
   /* Use margin */
   /* margin-left: -30px; */
+
+  // Option 2
   /* Use gap */
   /* column-gap: 30px;
-    row-gap: 30px; */
+      row-gap: 30px; */
 
   /* Use variables */
   /* ((3-1) * 30) / 3 */
+  // --columns: 3;
+  // --gap: 30px;
+  // --spacing: calc(calc(calc(var(--columns) - 1) * var(--gap)) / var(--columns));
+  // gap: var(--gap);
 
-  --columns: 3;
-  --gap: 30px;
-  --spacing: calc(calc(calc(var(--columns) - 1) * var(--gap)) / var(--columns));
-  gap: var(--gap);
-
-  display: flex;
-  align-items: stretch;
-  flex-direction: row;
-  flex-wrap: wrap;
+  // Option 4
+  // Grid
+  display: grid;
+  gap: 30px;
+  @include gridColumn(370px);
 
   .tour-item {
+    // Option 1
     /* Use margin */
     /* width: calc(33.33% - 30px);   */
     /* margin-left: 30px; */
 
+    // Option 2
     /* Use gap */
     /* Gap just contain space of block, not include start and end => total gap is 60px => width - 60/3=20px  */
     /* width: calc(33.33% - 20px); */
 
     /* Use variables */
-    width: calc(calc(100% / var(--columns)) - var(--spacing));
+    //width: calc(calc(100% / var(--columns)) - var(--spacing));
+
+    // Option 3
+    /* Có thể sử dụng flex 1 để dàn layout cho các item có width = nhau*/
+    //flex: 1;
+
+    // Option 4
+    // Grid
 
     height: auto;
     background: white;
@@ -53,11 +72,16 @@
       padding: 5px 16px;
       display: inline-block;
       color: #fcfcfd;
-      font-size: 12px;
-      line-height: 20px;
-      font-weight: 500;
       background: rgb(53, 57, 69, 0.8);
       border-radius: 4px;
+
+      @include font(
+        (
+          size: 12px,
+          lh: 20px,
+          fw: 500,
+        )
+      );
     }
 
     .tour-content {
@@ -66,24 +90,29 @@
     }
 
     .tour-title {
-      color: #23262f;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 1.556;
       margin-bottom: 20px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-break: break-word;
+      color: #23262f;
+      @include font(
+        (
+          size: 18px,
+          lh: 1.556,
+          fw: 500,
+        )
+      );
+
+      @include ellipsis(2);
     }
 
     .tour-rating {
       margin-bottom: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+
+      @include flexOptimized(
+        (
+          direction: row,
+          justify-content: space-between,
+          align-items: center,
+        )
+      );
     }
 
     .tour-duration,

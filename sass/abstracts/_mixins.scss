@@ -12,3 +12,31 @@
   align-items: $align-item;
   justify-content: $justify-content;
 }
+
+@mixin flexOptimized($options) {
+  display: flex;
+  flex-direction: map-get($options, direction);
+  flex-wrap: map-get($options, wrap);
+  gap: map-get($options, gap);
+  align-items: map-get($options, align-item);
+  justify-content: map-get($options, justify-content);
+}
+
+@mixin ellipsis($num) {
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+@mixin font($options) {
+  font-size: map-get($options, size);
+  line-height: map-get($options, lh);
+  font-weight: map-get($options, fw);
+}
+
+@mixin gridColumn($width) {
+  grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
+}

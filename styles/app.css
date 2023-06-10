@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --primary-color: #3b71fe;
   --black-color: #141416;
@@ -117,7 +118,7 @@ a.button {
 
 .footer-container {
   max-width: 1110px;
-  padding: 68px 0px;
+  padding: 68px 15px;
 }
 
 .footer-top {
@@ -229,17 +230,12 @@ a.button {
   /* margin-left: -30px; */
   /* Use gap */
   /* column-gap: 30px;
-    row-gap: 30px; */
+      row-gap: 30px; */
   /* Use variables */
   /* ((3-1) * 30) / 3 */
-  --columns: 3;
-  --gap: 30px;
-  --spacing: calc(calc(calc(var(--columns) - 1) * var(--gap)) / var(--columns));
-  gap: var(--gap);
-  display: flex;
-  align-items: stretch;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
 }
 .tour-list .tour-item {
   /* Use margin */
@@ -249,7 +245,7 @@ a.button {
   /* Gap just contain space of block, not include start and end => total gap is 60px => width - 60/3=20px  */
   /* width: calc(33.33% - 20px); */
   /* Use variables */
-  width: calc(100% / var(--columns) - var(--spacing));
+  /* Có thể sử dụng flex 1 để dàn layout cho các item có width = nhau*/
   height: auto;
   background: white;
   border-radius: 10px;
@@ -271,22 +267,22 @@ a.button {
   padding: 5px 16px;
   display: inline-block;
   color: #fcfcfd;
+  background: rgba(53, 57, 69, 0.8);
+  border-radius: 4px;
   font-size: 12px;
   line-height: 20px;
   font-weight: 500;
-  background: rgba(53, 57, 69, 0.8);
-  border-radius: 4px;
 }
 .tour-list .tour-item .tour-content {
   padding: 20px 20px 14px;
   border-radius: 0 0 10px 10px;
 }
 .tour-list .tour-item .tour-title {
+  margin-bottom: 20px;
   color: #23262f;
-  font-weight: 500;
   font-size: 18px;
   line-height: 1.556;
-  margin-bottom: 20px;
+  font-weight: 500;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -297,8 +293,8 @@ a.button {
 .tour-list .tour-item .tour-rating {
   margin-bottom: 20px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 .tour-list .tour-item .tour-duration,
 .tour-list .tour-item .tour-review-count {
@@ -579,8 +575,9 @@ a.button {
   }
   .tour-list {
     row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
-  .tour {
+  .tour-item {
     width: 100%;
   }
   .tour-title {
@@ -619,7 +616,7 @@ a.button {
     padding: 4px 20px;
   }
   .footer-container {
-    padding: 30px 0;
+    padding-block: 30px;
   }
   .footer-columns {
     flex-direction: column;
