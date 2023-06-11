@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/order.css">
+    <title>Checkout</title>
+  </head>
+  <body> 
+    <div class="checkout-container"> 
+      <div class="checkout-information"> 
+        <div class="checkout-header"> 
+          <div class="checkout-logo"> <span class="checkout-logo__image"><img src="../../images/cafe-logo.png" alt="Cafe logo"></span><span class="checkout-logo__title">Coffee Time</span></div>
+          <div class="checkout-total"> <span class="checkout-total__price">$240 (2 items)</span><span class="checkout-total__cart">
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
+              </svg></span></div>
+        </div>
+        <div class="checkout-main"> 
+          <h1 class="block checkout-title">How would you like to get your order?</h1>
+          <form class="checkout-forms" action=""> 
+            <div class="block names">
+              <div class="first-name"> 
+                <label class="form-label" for="first-name">First name</label>
+                <input type="text" name="first-name">
+              </div>
+              <div class="last-name"> 
+                <label class="form-label" for="last-name">Last name</label>
+                <input type="text" name="last-name">
+              </div>
+            </div>
+            <div class="block address">
+              <div class="address-street"> 
+                <label class="form-label" for="address-street">Street address</label>
+                <input type="text" name="address-street">
+              </div>
+              <div class="address-city"> 
+                <label class="form-label" for="address-city">Town/ City</label>
+                <input type="text" name="address-city">
+              </div>
+              <div class="address-state"> 
+                <label class="form-label" for="address-state">State</label>
+                <input type="text" name="address-state">
+              </div>
+              <div class="address-postcode"> 
+                <label class="form-label" for="address-postcode">Postcode</label>
+                <input type="text" name="address-postcode">
+              </div>
+              <div class="address-country"> 
+                <label class="form-label" for="address-country">Country</label>
+                <div class="dropdown"> 
+                  <div class="dropdown-selected"> 
+                    <div class="dropdown-item"> 
+                      <div class="dropdown-item__image"> <img src="../../images/vietnam.png" alt="Viet Nam"></div>
+                      <div class="dropdown-item__text">Viet Nam</div>
+                    </div>
+                  </div>
+                  <div class="dropdown-list"> 
+                    <div class="dropdown-item"> 
+                      <div class="dropdown-item__image"> <img src="../../images/vietnam.png" alt="Viet Nam"></div>
+                      <div class="dropdown-item__text">Viet Nam</div>
+                    </div>
+                    <div class="dropdown-item"> 
+                      <div class="dropdown-item__image"> <img src="../../images/us.png" alt="United States"></div>
+                      <div class="dropdown-item__text">United States</div>
+                    </div>
+                    <div class="dropdown-item"> 
+                      <div class="dropdown-item__image"> <img src="../../images/uk.png" alt="United Kingdom"></div>
+                      <div class="dropdown-item__text">United Kingdom</div>
+                    </div>
+                  </div>
+                </div>
+                <input type="text" name="address-country">
+              </div>
+            </div>
+            <div class="block email">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" name="email">
+            </div>
+            <button class="submit">Submit Order </button>
+          </form>
+        </div>
+        <div class="checkout-footer"> </div>
+      </div>
+      <div class="checkout-banner"> </div>
+    </div>
+  </body>
+</html>

@@ -1,10 +1,8 @@
-@mixin flex(
-  $direction: row,
+@mixin flex($direction: row,
   $gap: 0,
   $wrap: nowrap,
   $align-item: center,
-  $justify-content: center
-) {
+  $justify-content: center) {
   display: flex;
   flex-direction: $direction;
   flex-wrap: $wrap;
@@ -18,7 +16,7 @@
   flex-direction: map-get($options, direction);
   flex-wrap: map-get($options, wrap);
   gap: map-get($options, gap);
-  align-items: map-get($options, align-item);
+  align-items: map-get($options, align-items);
   justify-content: map-get($options, justify-content);
 }
 

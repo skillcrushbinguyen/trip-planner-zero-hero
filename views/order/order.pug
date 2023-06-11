@@ -1,0 +1,75 @@
+doctype html
+html(lang="en")
+   head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible", content="IE=edge")
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+      link(rel="stylesheet", href="../../styles/order.css")
+      title Checkout
+   body 
+      .checkout-container 
+         .checkout-information 
+            .checkout-header 
+               .checkout-logo 
+                  span.checkout-logo__image
+                     img(src="../../images/cafe-logo.png", alt="Cafe logo")
+                  span.checkout-logo__title Coffee Time
+               .checkout-total 
+                  span.checkout-total__price $240 (2 items)
+                  span.checkout-total__cart
+                     svg.w-6.h-6(xmlns="http://www.w3.org/2000/svg", fill="none", viewBox="0 0 24 24", stroke-width="1.5", stroke="currentColor")
+                        path(stroke-linecap="round", stroke-linejoin="round", d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z")
+
+            .checkout-main 
+               - var baseClasses = ['block']
+
+               h1(class=baseClasses class="checkout-title") How would you like to get your order?
+               form.checkout-forms(action="") 
+                  div(class=baseClasses class="names")
+                     .first-name 
+                        label.form-label(for="first-name") First name
+                        input(type="text", name="first-name")
+                     .last-name 
+                        label.form-label(for="last-name") Last name
+                        input(type="text", name="last-name")
+
+                  div(class=baseClasses class="address")
+                     .address-street 
+                        label.form-label(for="address-street") Street address
+                        input(type="text", name="address-street")
+                     .address-city 
+                        label.form-label(for="address-city") Town/ City
+                        input(type="text", name="address-city")
+                     .address-state 
+                        label.form-label(for="address-state") State
+                        input(type="text", name="address-state")
+                     .address-postcode 
+                        label.form-label(for="address-postcode") Postcode
+                        input(type="text", name="address-postcode")
+                     .address-country 
+                        label.form-label(for="address-country") Country
+                        .dropdown 
+                           .dropdown-selected 
+                              .dropdown-item 
+                                 .dropdown-item__image 
+                                    img(src="../../images/vietnam.png", alt="Viet Nam")
+                                 .dropdown-item__text Viet Nam
+                           .dropdown-list 
+                              - var items = [{img: '../../images/vietnam.png', text: 'Viet Nam'},{img: '../../images/us.png', text: 'United States'},{img: '../../images/uk.png', text: 'United Kingdom'}];
+                              each item in items 
+                                 .dropdown-item 
+                                    .dropdown-item__image 
+                                       img(src=item.img, alt=item.text)
+                                    .dropdown-item__text #{item.text}
+                              
+
+                        input(type="text", name="address-country")
+
+
+                  div(class=baseClasses class="email")
+                     label.form-label(for="email") Email
+                     input(type="email", name="email")
+
+                  button.submit Submit Order 
+            .checkout-footer 
+         .checkout-banner 

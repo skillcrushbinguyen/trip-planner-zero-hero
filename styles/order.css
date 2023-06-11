@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  background-color: #e0e2e6;
+  padding: 40px;
+  margin: 0 auto;
+  color: #111727;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+}
+
+input {
+  border: 2px solid #f0eff1;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.checkout-container {
+  background-color: #fff;
+  border-radius: 0 20px 20px 0;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.checkout-header {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkout-logo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.checkout-logo__image {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+.checkout-logo__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.checkout-logo__title {
+  font-weight: 700;
+}
+.checkout-total {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.checkout-total__price {
+  font-weight: 600;
+}
+.checkout-total__cart {
+  width: 16px;
+  height: 16px;
+}
+.checkout-main {
+  padding: 35px 30px;
+}
+.checkout-main .block {
+  margin-bottom: 25px;
+}
+.checkout-main .form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.checkout-main input {
+  width: 100%;
+}
+.checkout-main .checkout-title {
+  font-size: 20px;
+}
+.checkout-main .checkout-forms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.checkout-main .checkout-forms .names {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.checkout-main .checkout-forms .address {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "street street street street street" "city city city state postcode" "country country country country country";
+}
+.checkout-main .checkout-forms .address-street {
+  grid-area: street;
+}
+.checkout-main .checkout-forms .address-city {
+  grid-area: city;
+}
+.checkout-main .checkout-forms .address-state {
+  grid-area: state;
+}
+.checkout-main .checkout-forms .address-postcode {
+  grid-area: postcode;
+}
+.checkout-main .checkout-forms .address-country {
+  grid-area: country;
+}
+.checkout-main .checkout-forms .address-country .dropdown {
+  position: relative;
+}
+.checkout-main .checkout-forms .address-country .dropdown-selected {
+  border: 2px solid #f0eff1;
+  border-radius: 5px;
+  padding: 8px;
+}
+.checkout-main .checkout-forms .address-country .dropdown-list {
+  border: 2px solid #f0eff1;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.checkout-main .checkout-forms .address-country .dropdown-item {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+.checkout-main .checkout-forms .address-country .dropdown-item__image {
+  width: 20px;
+  height: 20px;
+}
+.checkout-main .checkout-forms .address-country .dropdown-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.checkout-main .checkout-forms .address-country .dropdown-item__text {
+  font-size: 14px;
+  font-weight: 500;
+}
+.checkout-main .checkout-forms .submit {
+  background-color: #111727;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=order.css.map */
